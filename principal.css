@@ -91,6 +91,9 @@ a:hover{
 	top: 66px;
 	transform: rotate(0);
 }
+#toggle{
+	display: none;
+}
 
 
 
