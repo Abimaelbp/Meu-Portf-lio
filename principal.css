@@ -12,7 +12,7 @@ body{
 	height: 100vh;
 	width: 100vw;
 	background-color: #60E1E0;
-	/*background-image: url('./imagens/agricultor.png');*/
+	/*background-image: url('./imagens/abimael.jpg');*/
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -93,6 +93,105 @@ a:hover{
 }
 #toggle{
 	display: none;
+}
+/* Menu*/
+
+.menu{
+	position: absolute;
+	top: 28px;
+	right: 30px;
+	background-color: transparent;
+	height: 4px;
+	width: 10px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 0px #FFFFFF;
+	z-index: -1;
+	transform: 400ms ease-in-out 0s;
+}
+.menu-itens{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	opacity: 0;
+	visibility: hidden;
+	transition: 400ms ease-in-out 0s;
+}
+.menu-itens ul{
+	list-style-type: none;
+}
+.menu-itens ul li a{
+	margin: 10px 0;
+	color: #1E1E2A;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 40px;
+}
+/*Animaçõa do Menu*/
+#toggle:checked + .checkbox .trace:nth-child(1){
+	transform:  rotate(45deg);
+	top: 47px;
+}
+#toggle:checked + .checkbox .trace:nth-child(2){
+	transform:  translate(-100px);
+	width: 30px;
+	visibility: hidden;
+	opacity: 0;
+}
+#toggle:checked + .checkbox .trace:nth-child(3){
+	transform:  rotate(-45deg);
+	top: 48px;
+}
+#toggle:checked + .checkbox{
+	background-color: #ffffff
+}
+/*quando o toggle estiver checado*/
+#toggle:checked ~ .menu{
+	box-shadow: 0px 0px 0px 100vmax #ffffff;
+	z-index: 1;
+}
+#toggle:checked ~ .menu-itens{
+	visibility: visible;
+	opacity: 1;
+}
+/*cards*/
+.container{
+	height: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margi: 3rm 0;
+}
+.card-container{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 90%;
+}
+.card{
+	width:300px;
+	height: 300px;
+	border-radius:  100%;
+	margin: 3rem 0 0 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #60E1E0;
+	background-image: url('./imagens/agricultor.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	filter: grayscale(0.5);
+	color:#1E1E2A;
+	cursor: pointer;
+	transition: 0.5s ease-in-out;
 }
 
 
