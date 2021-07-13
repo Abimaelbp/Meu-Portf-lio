@@ -9,10 +9,10 @@ body{
 /* header */
 
 .header-container{
-	height: 100vh;
+	height: 80vh;
 	width: 100vw;
 	background-color: #60E1E0;
-	/*background-image: url('./imagens/abimael.jpg');*/
+	background-image: url('./imagens/abimael.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -25,13 +25,13 @@ body{
 	position: relative;
 }
 h1{
-	font-size: 50px;
+	font-size: 30px;
 	text-transform: uppercase;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 }
 h2{
 	text-transform: uppercase;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 }
 	/* link da rede social linkedin */
 .social-media{
@@ -41,7 +41,7 @@ h2{
 .social-media a{
 	text-decoration: none;
 	color: #1E1E2A;
-	padding: 1rem 4rem;
+	padding: 1rem 2rem;
 	border: 1px solid #1E1E2A;
 	min-width: 4rem;
 	display: flex;
@@ -193,10 +193,67 @@ a:hover{
 	cursor: pointer;
 	transition: 0.5s ease-in-out;
 }
-
-
-
-
+.card-text{
+	width: 40%;
+	letter-spacing: 1px;
+	color: rgb(109, 109, 109);
+}
+.card-wrapper{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.card-wrapper::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	display: black;
+	border: 1px solid #ffffff;
+	opacity: 0;
+	transition: 0.5s ease-in-out;
+}
+.card-wrapper h2{
+	font-size: 40px;
+	text-decoration: uppercase;
+	letter-spacing: 4px;
+	margin: 0;
+	transition: 0.5s ease-in-out;
+}
+.card-wrapper p{
+	font-size: 0;
+	visibility: visible;
+	opacity: 0;
+	font-weight: bold;
+	transition: 0.5s ease-in-out;
+}
+.card:hover{
+	filter:unset;
+}
+.card:hover > .card-wrapper::before{
+	height: 250px;
+	width: 250px;
+	opacity: 1;
+}
+.card:hover > .card-wrapper p{
+	opacity: 1;
+	visibility: visible;
+	font-size: 14px;
+}
+/*FOOTER*/
+.footer{
+	height: 10vh;
+	width: 100vw;
+	background-color: #60E1E0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #1E1E2A;
+}
 
 
 
