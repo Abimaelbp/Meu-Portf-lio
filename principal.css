@@ -184,7 +184,7 @@ a:hover{
 	align-items: center;
 	justify-content: center;
 	background-color: #60E1E0;
-	background-image: url('./imagens/agricultor.png');
+	/*background-image: url('./imagens/agricultor.png');*/
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
